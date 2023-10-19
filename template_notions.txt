@@ -1,0 +1,18 @@
+Templates
+
+allow to define a template which will be compile by your usage
+Le compilateur peut coder pour nous, en se basant sur un ensemble de regles
+
+On peut creer une fonction, mais qui peut avoir besoin de prendre en parametre
+des variables qui peuvent etre de types ifferents.
+ 
+ template = modeles de code a trous pour les classes, structures ou types. Donc le template doit etre instancie a l'utilisation.
+
+template<typename T>
+
+ce "T" pourrait etre un type classique ou une instance de classe. SI c'est le cas, mieux d passer les param en reference, et en const si on n'a pas besoin de les modifier - >
+    	T const &min (T &x, T const &y)
+	{
+		return (x < y ? x : y);
+	}
+L'instanciation peut etre explicite ou implicite. Mais l'instanciation implicite est peu safe (mauvaise habitude)
