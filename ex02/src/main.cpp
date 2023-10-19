@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 10:21:41 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/19 15:41:13 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:52:46 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
+    
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
     {
@@ -44,7 +45,8 @@ int main(int, char**)
         Array<int> test(tmp);
         for (int i = 0; i < test.size(); i++)
         {
-            std::cout << i << ". " << test.operator[](i) << std::endl;
+            std::cout << BOLD "test: "<< i << ". " DEFAULT << test.operator[](i) << std::endl;
+            std::cout << BOLD "mirror: "<< i << ". " DEFAULT << mirror[i] << std::endl;
         }
     }
     Array<std::string> strings(MAX_VAL);
@@ -59,7 +61,8 @@ int main(int, char**)
         Array<std::string> test2(tmp2);
         for (int i = 0; i < test2.size(); i++)
         {
-            std::cout << i << ". " << test2.operator[](i) << std::endl;
+            std::cout << BOLD "test2: " << i << ". " DEFAULT << test2.operator[](i) << std::endl;
+            std::cout << BOLD"mirror2: "<< i << ". " DEFAULT << mirror2[i] << std::endl;
         }
     }
     for (int i = 0; i < MAX_VAL; i++)
